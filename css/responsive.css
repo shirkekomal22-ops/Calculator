@@ -1,0 +1,51 @@
+/* ==========================================================================
+   AURA SMART CALCULATOR - RESPONSIVE QUERIES & FOOTER
+   ========================================================================== */
+
+/* --- App Footer --- */
+.app-footer {
+  text-align: center;
+  padding: 10px 0 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+
+/* --- Media Adaptations (Mobile Viewports) --- */
+@media (max-width: 580px) {
+  .app-container {
+    margin-top: 0;
+    width: 95%;
+  }
+
+  .calc-screen {
+    padding: 16px 20px;
+    min-height: 70px;
+  }
+
+  .screen-current {
+    font-size: 1.8rem;
+  }
+
+  .button-grid {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 10px 0;
+    font-size: 1.05rem;
+  }
+  
+  .btn-operator {
+    font-size: 1.15rem;
+  }
+
+  .btn-equals {
+    font-size: 1.2rem;
+  }
+
+  .history-sidebar {
+    width: 100%;
+  }
+}

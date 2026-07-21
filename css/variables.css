@@ -1,0 +1,118 @@
+/* ==========================================================================
+   AURA SMART CALCULATOR - VARIABLES & DESIGN TOKENS
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* --- Transitions --- */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Border Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-round: 50%;
+}
+
+/* --- Dark Theme Variables --- */
+[data-theme="dark"] {
+  --bg-app: #0f0712;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #20081b 0%, #080208 100%);
+  --panel-glass: rgba(219, 39, 119, 0.05);
+  --panel-border: rgba(244, 114, 182, 0.15);
+  --panel-glow: rgba(236, 72, 153, 0.15);
+  
+  --text-primary: #fff1f8;
+  --text-secondary: #f472b6;
+  --text-muted: #be185d;
+
+  --accent-purple: #ec4899;
+  --accent-purple-glow: rgba(236, 72, 153, 0.4);
+  --accent-pink: #f472b6;
+  --accent-pink-glow: rgba(244, 114, 182, 0.4);
+  --accent-blue: #3b82f6;
+  --accent-blue-glow: rgba(59, 130, 246, 0.4);
+  --accent-emerald: #34d399;
+  --accent-emerald-glow: rgba(52, 211, 153, 0.4);
+  
+  --btn-num-bg: rgba(255, 255, 255, 0.03);
+  --btn-num-bg-hover: rgba(244, 114, 182, 0.1);
+  --btn-num-text: #fff1f8;
+  
+  --btn-sci-bg: rgba(236, 72, 153, 0.08);
+  --btn-sci-bg-hover: rgba(236, 72, 153, 0.18);
+  --btn-sci-text: #f472b6;
+  
+  --btn-op-bg: rgba(219, 39, 119, 0.1);
+  --btn-op-bg-hover: rgba(219, 39, 119, 0.2);
+  --btn-op-text: #f472b6;
+  
+  --btn-action-bg: rgba(244, 63, 94, 0.12);
+  --btn-action-bg-hover: rgba(244, 63, 94, 0.22);
+  --btn-action-text: #fb7185;
+
+  --screen-bg: rgba(8, 2, 7, 0.85);
+  --screen-border: rgba(244, 114, 182, 0.08);
+  --screen-glow: inset 0 2px 10px rgba(0, 0, 0, 0.7);
+  
+  --blob-1: rgba(219, 39, 119, 0.35);
+  --blob-2: rgba(236, 72, 153, 0.3);
+  --blob-3: rgba(139, 92, 246, 0.25);
+
+  --scrollbar-thumb: rgba(244, 114, 182, 0.15);
+  --btn-border: rgba(244, 114, 182, 0.12);
+}
+
+/* --- Light Theme Variables --- */
+[data-theme="light"] {
+  --bg-app: #f4f6fb;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #ffffff 0%, #e2e8f0 100%);
+  --panel-glass: rgba(255, 255, 255, 0.7);
+  --panel-border: rgba(0, 0, 0, 0.08);
+  --panel-glow: rgba(99, 102, 241, 0.05);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --accent-purple: #6d28d9;
+  --accent-purple-glow: rgba(109, 40, 217, 0.2);
+  --accent-pink: #db2777;
+  --accent-pink-glow: rgba(219, 39, 119, 0.2);
+  --accent-blue: #2563eb;
+  --accent-blue-glow: rgba(37, 99, 235, 0.2);
+  --accent-emerald: #059669;
+  --accent-emerald-glow: rgba(5, 150, 105, 0.2);
+
+  --btn-num-bg: rgba(15, 23, 42, 0.05);
+  --btn-num-bg-hover: rgba(15, 23, 42, 0.09);
+  --btn-num-text: #1e293b;
+
+  --btn-sci-bg: rgba(79, 70, 229, 0.08);
+  --btn-sci-bg-hover: rgba(79, 70, 229, 0.15);
+  --btn-sci-text: #4f46e5;
+
+  --btn-op-bg: rgba(219, 39, 119, 0.08);
+  --btn-op-bg-hover: rgba(219, 39, 119, 0.15);
+  --btn-op-text: #db2777;
+
+  --btn-action-bg: rgba(225, 29, 72, 0.08);
+  --btn-action-bg-hover: rgba(225, 29, 72, 0.15);
+  --btn-action-text: #e11d48;
+
+  --screen-bg: rgba(255, 255, 255, 0.95);
+  --screen-border: rgba(0, 0, 0, 0.06);
+  --screen-glow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+
+  --blob-1: rgba(167, 139, 250, 0.2);
+  --blob-2: rgba(147, 197, 253, 0.25);
+  --blob-3: rgba(244, 143, 177, 0.2);
+
+  --scrollbar-thumb: rgba(0, 0, 0, 0.1);
+  --btn-border: rgba(0, 0, 0, 0.05);
+}

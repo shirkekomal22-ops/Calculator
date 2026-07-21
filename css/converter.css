@@ -1,0 +1,100 @@
+/* ==========================================================================
+   AURA SMART CALCULATOR - UNIT CONVERTER TAB STYLING
+   ========================================================================== */
+
+.converter-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.converter-category {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.converter-category select,
+.converter-box select {
+  font-family: var(--font-sans);
+  background: var(--screen-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--panel-border);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.converter-category select:focus,
+.converter-box select:focus,
+.converter-box input:focus {
+  border-color: var(--accent-purple);
+}
+
+.converter-grids {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.converter-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--panel-border);
+  padding: 20px;
+  border-radius: var(--radius-md);
+}
+
+[data-theme="light"] .converter-box {
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.converter-box input {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--panel-border);
+  color: var(--text-primary);
+  padding: 8px 0;
+  outline: none;
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+.converter-box input:focus {
+  border-color: var(--accent-purple);
+}
+
+.swap-btn {
+  border-radius: var(--radius-round);
+  width: 46px;
+  height: 46px;
+  background: var(--btn-sci-bg);
+  color: var(--accent-purple);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swap-btn:hover {
+  background: var(--accent-purple);
+  color: #fff;
+  transform: rotate(180deg) scale(1.05);
+}
+
+@media (min-width: 580px) {
+  .converter-grids {
+    flex-direction: row;
+  }
+  
+  .converter-box {
+    flex: 1;
+  }
+}

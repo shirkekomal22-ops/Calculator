@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA | Smart Calculator</title>
+  <meta name="description" content="A beautiful, interactive, and premium Smart Calculator with Scientific Evaluation, 2D Function Graphing, Unit Conversion, and Calculation History.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <!-- SVG Symbols Sprite Library (Shared Vectors) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- History Clock Icon -->
+    <symbol id="icon-history" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <polyline points="12 6 12 12 16 14"></polyline>
+    </symbol>
+
+    <!-- Moon Icon -->
+    <symbol id="icon-moon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </symbol>
+
+    <!-- Sun Icon -->
+    <symbol id="icon-sun" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </symbol>
+
+    <!-- Zoom In Icon -->
+    <symbol id="icon-zoom-in" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="16"></line>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+    </symbol>
+
+    <!-- Zoom Out Icon -->
+    <symbol id="icon-zoom-out" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+    </symbol>
+
+    <!-- Swap Icon -->
+    <symbol id="icon-swap" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="17 1 21 5 17 9"></polyline>
+      <line x1="3" y1="5" x2="21" y2="5"></line>
+      <polyline points="7 23 3 19 7 15"></polyline>
+      <line x1="21" y1="19" x2="3" y2="19"></line>
+    </symbol>
+
+    <!-- Close Icon -->
+    <symbol id="icon-close" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </symbol>
+  </svg>
+
+  <!-- Ambient Blobs -->
+  <div class="background-decorations" aria-hidden="true">
+    <div class="blob blob-purple"></div>
+    <div class="blob blob-blue"></div>
+    <div class="blob blob-pink"></div>
+  </div>
+
+  <main class="app-container">
+    <!-- Component-driven UI nodes -->
+    <app-header></app-header>
+    <mode-navigation></mode-navigation>
+    
+    <div class="content-panel">
+      <calc-panel class="tab-panel active"></calc-panel>
+      <graph-panel class="tab-panel"></graph-panel>
+      <converter-panel class="tab-panel"></converter-panel>
+    </div>
+
+    <history-sidebar></history-sidebar>
+    <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+  </main>
+
+  <app-footer></app-footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* ==========================================================================
+   AURA SMART CALCULATOR - MAIN CONTAINER & LAYOUTS
+   ========================================================================== */
+
+/* --- Layout Container --- */
+.app-container {
+  width: 92%;
+  max-width: 520px;
+  margin: 0;
+  background: var(--panel-glass);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25),
+              0 0 40px var(--panel-glow);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
+}
+
+/* Tab contents may expand max-width dynamically for graphing */
+.app-container.graph-expanded {
+  max-width: 900px;
+}
+
+/* --- Header Styling --- */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px 10px;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  user-select: none;
+}
+
+.logo-accent {
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-text {
+  color: var(--text-primary);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+/* --- Mode Navigation / Tabs --- */
+.mode-navigation {
+  display: flex;
+  padding: 4px 24px;
+  gap: 8px;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.nav-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-tab:hover {
+  color: var(--text-primary);
+}
+
+.nav-tab.active {
+  color: var(--accent-purple);
+  font-weight: 600;
+}
+
+.nav-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+  border-radius: 10px 10px 0 0;
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.nav-tab.active::after {
+  transform: scaleX(1);
+}
+
+/* --- Content Panel Area --- */
+.content-panel {
+  padding: 16px 24px;
+  flex-grow: 1;
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,57 @@
+/* ==========================================================================
+   AURA SMART CALCULATOR - CALCULATOR PANEL SCREEN & GRID
+   ========================================================================== */
+
+/* --- Screen Display --- */
+.calc-screen {
+  background: var(--screen-bg);
+  box-shadow: var(--screen-glow);
+  border: 1px solid var(--screen-border);
+  border-radius: var(--radius-lg);
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: right;
+  overflow: hidden;
+  position: relative;
+}
+
+.screen-history {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  min-height: 24px;
+  margin-bottom: 8px;
+  font-weight: 400;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.screen-current {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.screen-current::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* --- Button Grid System --- */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
