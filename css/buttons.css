@@ -60,6 +60,10 @@
   transition: all var(--transition-fast);
 }
 
+.btn:hover {
+  filter: brightness(0.85);
+}
+
 .btn sup {
   font-size: 0.75rem;
   margin-left: 2px;
@@ -176,7 +180,6 @@
 .btn-equals:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px var(--accent-purple-glow);
-  filter: brightness(1.1);
 }
 
 .btn-equals:active {
