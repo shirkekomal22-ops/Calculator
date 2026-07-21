@@ -2,9 +2,44 @@
    AURA SMART CALCULATOR - MAIN CONTAINER & LAYOUTS
    ========================================================================== */
 
+/* --- App Wrapper (for decoration placement) --- */
+.app-wrapper {
+  position: relative;
+  width: 92%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: max-width var(--transition-normal);
+  z-index: 10;
+}
+
+.app-wrapper:has(.graph-expanded) {
+  max-width: 900px;
+}
+
+/* Kitty Corner Decoration */
+.kitty-decor {
+  position: absolute;
+  top: -46px; /* Peaks beautifully over the top edge */
+  left: -24px; /* Positions overlapping the left edge */
+  height: 80px;
+  width: auto;
+  z-index: 100; /* Sits above the calculator glass card */
+  pointer-events: none; /* Let clicks pass through to tabs below */
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.22));
+  transform: rotate(-6deg);
+  transition: transform var(--transition-normal), left var(--transition-normal);
+}
+
+.app-wrapper:has(.graph-expanded) .kitty-decor {
+  left: -20px; /* Slight adjust when expanded */
+  transform: rotate(-4deg);
+}
+
 /* --- Layout Container --- */
 .app-container {
-  width: 92%;
+  width: 100%;
   max-width: 520px;
   margin: 0;
   background: var(--panel-glass);
