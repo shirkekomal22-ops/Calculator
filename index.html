@@ -10,7 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="script.js"></script>
+  
+  <!-- Web Component Scripts (Bypasses CORS for direct local file launch) -->
+  <script src="components/AppHeader.js" defer></script>
+  <script src="components/ModeNavigation.js" defer></script>
+  <script src="components/CalcPanel.js" defer></script>
+  <script src="components/GraphPanel.js" defer></script>
+  <script src="components/ConverterPanel.js" defer></script>
+  <script src="components/HistorySidebar.js" defer></script>
+  <script src="components/AppFooter.js" defer></script>
+  
+  <!-- Main Application Entry -->
+  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- SVG Symbols Sprite Library (Shared Vectors) -->
